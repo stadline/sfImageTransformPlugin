@@ -170,7 +170,16 @@ class sfImageTransformImageMagickAdapter extends sfImageTransformAdapterAbstract
   {
     $copyObj = clone $this;
 
-    $copyObj->setHolder($this->getHolder()->clone());
+    $extension = new ReflectionExtension('imagick');
+
+    if (version_compare($extension->getVersion(), '3.0.1', '>'))
+    {
+      $copyObj->setHolder(clone $this->getHolder());
+    }
+    else
+    {
+      $copyObj->setHolder($this->getHolder()->clone());
+    }
 
     return $copyObj;
   }
