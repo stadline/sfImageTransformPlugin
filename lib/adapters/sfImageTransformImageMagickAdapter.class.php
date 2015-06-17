@@ -37,7 +37,8 @@ class sfImageTransformImageMagickAdapter extends sfImageTransformAdapterAbstract
   protected $types = array(
     'image/jpeg' => array('jpeg','jpg'),
     'image/gif' => array('gif'),
-    'image/png' => array('png')
+    'image/png' => array('png'),
+    'image/bmp' => array('bmp'),
   );
 
   /**
