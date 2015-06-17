@@ -57,7 +57,8 @@ class sfImage
     'image/jpeg' => array('jpg', 'jpeg'),
     'image/png' => array('png'),
     'image/svg' => array('svg'),
-    'image/tiff' => array('tiff')
+    'image/tiff' => array('tiff'),
+    'image/bmp' => array('bmp'),
   );
 
   /**

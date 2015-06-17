@@ -37,7 +37,8 @@ class sfImageTransformImageMagickAdapter extends sfImageTransformAdapterAbstract
   protected $types = array(
     'image/jpeg' => array('jpeg','jpg'),
     'image/gif' => array('gif'),
-    'image/png' => array('png')
+    'image/png' => array('png'),
+    'image/bmp' => array('bmp'),
   );
 
   /**
@@ -169,7 +170,16 @@ class sfImageTransformImageMagickAdapter extends sfImageTransformAdapterAbstract
   {
     $copyObj = clone $this;
 
-    $copyObj->setHolder($this->getHolder()->clone());
+    $extension = new ReflectionExtension('imagick');
+
+    if (version_compare($extension->getVersion(), '3.0.1', '>'))
+    {
+      $copyObj->setHolder(clone $this->getHolder());
+    }
+    else
+    {
+      $copyObj->setHolder($this->getHolder()->clone());
+    }
 
     return $copyObj;
   }

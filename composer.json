@@ -1,0 +1,27 @@
+{
+    "name": "lexpress/sf-image-transform-plugin",
+    "description": "Powerful but simple to use image manipulation plugin",
+    "keywords": "symfony1, image, transform",
+    "type": "symfony1-plugin",
+    "licence": "MIT",
+    "authors": [
+        {
+            "name": "Stuart Lowes",
+            "email": "stuart.lowes@gmail.com",
+            "role": "Creator"
+        },
+        {
+            "name": "Jerome Macias",
+            "email": "jmacias@groupe-exp.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Jerome Lepeltier",
+            "email": "jlepeltier@groupe-exp.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "composer/installers": "*"
+    }
+}
